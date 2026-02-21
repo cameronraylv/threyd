@@ -936,6 +936,278 @@
         </div>
     </section>
 
+  <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>What We Offer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #f7f3ee;
+      font-family: 'DM Sans', sans-serif;
+      color: #2b2218;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section {
+      max-width: 1100px;
+      width: 100%;
+      padding: 80px 40px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #c0692a;
+      margin-bottom: 20px;
+    }
+
+    .headline {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(42px, 6vw, 68px);
+      font-weight: 700;
+      line-height: 1.1;
+      color: #1e1510;
+      margin-bottom: 24px;
+    }
+
+    .subheadline {
+      font-size: 16px;
+      line-height: 1.65;
+      color: #5a4a3a;
+      max-width: 560px;
+      margin: 0 auto 64px;
+    }
+
+    .cards {
+      display: flex;
+      gap: 0;
+      align-items: stretch;
+      position: relative;
+    }
+
+    .card {
+      flex: 1;
+      background: #fdf9f5;
+      border-radius: 16px;
+      padding: 48px 36px 44px;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 2px 24px rgba(120, 80, 40, 0.07);
+      overflow: visible;
+    }
+
+    /* glowing orb effects */
+    .card:first-child::before {
+      content: '';
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(220, 140, 80, 0.35) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .card:last-child::after {
+      content: '';
+      position: absolute;
+      top: -30px;
+      right: -30px;
+      width: 120px;
+      height: 120px;
+      background: radial-gradient(circle, rgba(220, 140, 80, 0.35) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    /* Connector arrows between cards */
+    .connector {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+
+    .connector-inner {
+      display: flex;
+      align-items: center;
+      gap: 0;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background: #c0692a;
+      border-radius: 50%;
+    }
+
+    .dash {
+      width: 30px;
+      height: 2px;
+      background: #c0692a;
+    }
+
+    .arrow-tip {
+      width: 0;
+      height: 0;
+      border-top: 5px solid transparent;
+      border-bottom: 5px solid transparent;
+      border-left: 8px solid #c0692a;
+    }
+
+    /* Last connector has only arrow */
+    .connector.right .dot { display: none; }
+    .connector.right .dash { width: 50px; }
+
+    .icon-wrap {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .icon-wrap svg {
+      width: 52px;
+      height: 52px;
+      stroke: #c0692a;
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      color: #1e1510;
+      margin-bottom: 16px;
+    }
+
+    .card-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #6b5745;
+    }
+
+    @media (max-width: 720px) {
+      .cards { flex-direction: column; }
+      .connector { width: auto; height: 24px; transform: rotate(90deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="section">
+    <p class="eyebrow">What We Offer</p>
+    <h2 class="headline">We handle everything.<br>You focus on growth.</h2>
+    <p class="subheadline">From strategy to execution, our team acts as your full-service extension—no oversight required.</p>
+
+    <div class="cards">
+
+      <!-- Card 1: Strategic Support -->
+      <div class="card">
+        <div class="icon-wrap">
+          <!-- Compass icon -->
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="24" cy="24" r="19"/>
+            <circle cx="24" cy="24" r="2"/>
+            <!-- compass needle pointing NE -->
+            <polygon points="24,10 27,24 24,22 21,24" fill="#c0692a" stroke="#c0692a" stroke-width="1"/>
+            <polygon points="24,38 21,24 24,26 27,24" fill="#f7f3ee" stroke="#c0692a" stroke-width="1"/>
+            <!-- tick marks -->
+            <line x1="24" y1="5" x2="24" y2="8"/>
+            <line x1="24" y1="40" x2="24" y2="43"/>
+            <line x1="5" y1="24" x2="8" y2="24"/>
+            <line x1="40" y1="24" x2="43" y2="24"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Strategic Support</h3>
+        <p class="card-desc">We align with your vision and take ownership of daily operations, ensuring every detail supports your goals.</p>
+      </div>
+
+      <!-- Connector 1 -->
+      <div class="connector">
+        <div class="connector-inner">
+          <div class="dot"></div>
+          <div class="dash"></div>
+          <div class="arrow-tip"></div>
+        </div>
+      </div>
+
+      <!-- Card 2: Customer Experience -->
+      <div class="card">
+        <div class="icon-wrap">
+          <!-- Handshake icon -->
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <!-- left hand -->
+            <path d="M4 28 C4 28 8 20 14 20 L20 20 L26 16"/>
+            <path d="M26 16 L30 14 C32 13 34 15 32 17 L28 21"/>
+            <path d="M28 21 L32 18 C34 17 36 19 34 21 L30 25"/>
+            <path d="M30 25 L34 22 C36 21 38 23 36 25 L30 30"/>
+            <path d="M30 30 L33 28 C35 27 37 29 35 31 L28 36 C26 37 24 37 22 36 L14 32"/>
+            <!-- right hand -->
+            <path d="M44 28 C44 28 40 20 34 20 L28 20 L22 16"/>
+            <path d="M4 28 L14 32"/>
+            <path d="M44 28 L34 32 L28 36"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Customer Experience</h3>
+        <p class="card-desc">Your clients feel cared for and supported, while you stay focused on scaling.</p>
+      </div>
+
+      <!-- Connector 2 -->
+      <div class="connector right">
+        <div class="connector-inner">
+          <div class="dot"></div>
+          <div class="dash"></div>
+          <div class="arrow-tip"></div>
+        </div>
+      </div>
+
+      <!-- Card 3: Growth & Outreach -->
+      <div class="card">
+        <div class="icon-wrap">
+          <!-- Rocket icon -->
+          <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+            <!-- rocket body -->
+            <path d="M24 6 C24 6 34 10 36 24 L36 36 L24 42 L12 36 L12 24 C14 10 24 6 24 6Z"/>
+            <!-- window -->
+            <circle cx="24" cy="22" r="5"/>
+            <!-- fins -->
+            <path d="M12 30 L6 38 L14 36"/>
+            <path d="M36 30 L42 38 L34 36"/>
+            <!-- exhaust -->
+            <path d="M20 42 C20 44 22 46 24 46 C26 46 28 44 28 42"/>
+          </svg>
+        </div>
+        <h3 class="card-title">Growth &amp; Outreach</h3>
+        <p class="card-desc">Lead generation, campaigns, and sales—all handled expertly to drive measurable results.</p>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
     <!-- Services Section -->
     <section class="services">
         <div class="section-header">
