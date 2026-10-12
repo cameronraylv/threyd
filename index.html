@@ -1,15 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://unpkg.com/@phosphor-icons/web"></script>
-  <head>
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Threyd - Fair Staffing</title>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
         :root {
             --cream: #f7f3ee;
@@ -35,7 +43,7 @@
             padding: 28px 60px;
             position: relative;
             z-index: 100;
-            border-bottom: 1px solid rgba(192,105,42,0.12);
+            border-bottom: 1px solid rgba(192, 105, 42, 0.12);
         }
 
         .logo {
@@ -60,10 +68,16 @@
         .hero::before {
             content: '';
             position: absolute;
-            width: 600px; height: 600px;
-            background: radial-gradient(circle, rgba(192,105,42,0.25) 0%, transparent 70%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(
+                circle,
+                rgba(192, 105, 42, 0.25) 0%,
+                transparent 70%
+            );
             border-radius: 50%;
-            top: -200px; right: -100px;
+            top: -200px;
+            right: -100px;
         }
 
         .hero-content {
@@ -84,7 +98,9 @@
             line-height: 1.1;
         }
 
-        .hero-highlight { color: var(--orange); }
+        .hero-highlight {
+            color: var(--orange);
+        }
 
         .hero p {
             font-size: 19px;
@@ -94,32 +110,58 @@
         }
 
         .hero-visual {
-            background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+            background: linear-gradient(
+                135deg,
+                var(--orange) 0%,
+                var(--orange-light) 100%
+            );
             display: flex;
             align-items: center;
             justify-content: center;
         }
 
-        .hero-symbol { width: 200px; height: 200px; position: relative; }
+        .hero-symbol {
+            width: 200px;
+            height: 200px;
+            position: relative;
+        }
 
         .symbol-line {
             position: absolute;
-            width: 140px; height: 8px;
+            width: 140px;
+            height: 8px;
             border-radius: 4px;
-            top: 50%; left: 50%;
+            top: 50%;
+            left: 50%;
             transform-origin: center;
         }
 
-        .line1 { background: white; transform: translate(-50%, -50%) rotate(0deg); opacity: 0.9; }
-        .line2 { background: white; transform: translate(-50%, -50%) rotate(60deg); opacity: 0.7; }
-        .line3 { background: white; transform: translate(-50%, -50%) rotate(-60deg); opacity: 0.5; }
+        .line1 {
+            background: white;
+            transform: translate(-50%, -50%) rotate(0deg);
+            opacity: 0.9;
+        }
+
+        .line2 {
+            background: white;
+            transform: translate(-50%, -50%) rotate(60deg);
+            opacity: 0.7;
+        }
+
+        .line3 {
+            background: white;
+            transform: translate(-50%, -50%) rotate(-60deg);
+            opacity: 0.5;
+        }
 
         .symbol-center {
             position: absolute;
-            width: 20px; height: 20px;
+            width: 20px;
+            height: 20px;
             background: white;
             border-radius: 50%;
-            top: 50%; left: 50%;
+            top: 50%;
+            left: 50%;
             transform: translate(-50%, -50%);
         }
 
@@ -147,9 +189,16 @@
             text-align: center;
         }
 
-        .section-header .section-title { font-size: 58px; margin-bottom: 20px; }
+        .section-header .section-title {
+            font-size: 58px;
+            margin-bottom: 20px;
+        }
 
-        .section-intro { font-size: 18px; color: var(--muted); line-height: 1.7; }
+        .section-intro {
+            font-size: 18px;
+            color: var(--muted);
+            line-height: 1.7;
+        }
 
         /* About — cream */
         .about-container {
@@ -160,9 +209,15 @@
         .about-container::before {
             content: '';
             position: absolute;
-            left: 0; top: 0;
-            width: 6px; height: 100%;
-            background: linear-gradient(180deg, var(--orange) 0%, var(--orange-light) 100%);
+            left: 0;
+            top: 0;
+            width: 6px;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                var(--orange) 0%,
+                var(--orange-light) 100%
+            );
         }
 
         .about {
@@ -175,7 +230,10 @@
             align-items: start;
         }
 
-        .about-title { position: sticky; top: 100px; }
+        .about-title {
+            position: sticky;
+            top: 100px;
+        }
 
         .about-title h2 {
             font-family: 'Playfair Display', serif;
@@ -194,8 +252,16 @@
             color: var(--muted);
         }
 
-        .about-content p:first-child { font-size: 22px; color: var(--dark); font-weight: 500; }
-        .about-content strong { color: var(--orange); font-weight: 600; }
+        .about-content p:first-child {
+            font-size: 22px;
+            color: var(--dark);
+            font-weight: 500;
+        }
+
+        .about-content strong {
+            color: var(--orange);
+            font-weight: 600;
+        }
 
         .pullquote {
             background: var(--card-bg);
@@ -208,67 +274,30 @@
             color: var(--dark);
             line-height: 1.55;
             border-radius: 0 12px 12px 0;
-            box-shadow: 0 2px 16px rgba(120,80,40,0.07);
+            box-shadow: 0 2px 16px rgba(120, 80, 40, 0.07);
         }
 
-        /* Services — orange (2nd section) */
-        .services {
-            background: linear-gradient(135deg, var(--orange) 0%, #d69264 100%);
-            padding: 120px 60px;
-        }
-
-        .services .section-header .eyebrow { color: rgba(255,255,255,0.85); }
-        .services .section-header .section-title { color: white; }
-        .services .section-header .section-intro { color: rgba(255,255,255,0.85); }
-
-        .services-grid {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            gap: 0;
-            align-items: stretch;
-        }
-
-        .service-card {
-            flex: 1;
-            background: var(--card-bg);
-            padding: 48px 36px 44px;
-            border-radius: 16px;
-            box-shadow: 0 2px 24px rgba(120,80,40,0.07);
-            text-align: center;
-            position: relative;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .service-card:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(120,80,40,0.13); }
-
-        .service-connector {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            flex-shrink: 0;
-        }
-
-        .connector-inner { display: flex; align-items: center; }
-        .conn-dot { width: 8px; height: 8px; background: var(--orange); border-radius: 50%; }
-        .conn-dash { width: 24px; height: 2px; background: var(--orange); }
-        .conn-arrow { width: 0; height: 0; border-top: 5px solid transparent; border-bottom: 5px solid transparent; border-left: 8px solid var(--orange); }
-
-        .service-icon { width: 64px; height: 64px; margin: 0 auto 28px; display: flex; align-items: center; justify-content: center; }
-        .service-icon svg { width: 52px; height: 52px; stroke: var(--orange); fill: none; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-        .service-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 14px; }
-        .service-card p { font-size: 15px; line-height: 1.75; color: var(--muted); }
-
-        /* How It Works — cream (3rd section) */
+        /* How It Works — orange */
         .how-it-works {
-            background: var(--cream);
+            background: linear-gradient(
+                135deg,
+                var(--orange) 0%,
+                #d69264 100%
+            );
             padding: 120px 60px;
         }
 
-        .how-it-works .section-header .eyebrow { color: var(--orange); }
-        .how-it-works .section-header .section-title { color: var(--dark); }
-        .how-it-works .section-header .section-intro { color: var(--muted); }
+        .how-it-works .section-header .eyebrow {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .how-it-works .section-header .section-title {
+            color: white;
+        }
+
+        .how-it-works .section-header .section-intro {
+            color: rgba(255, 255, 255, 0.85);
+        }
 
         .steps-container {
             max-width: 1200px;
@@ -282,15 +311,21 @@
             background: var(--card-bg);
             padding: 50px 36px 44px;
             border-radius: 16px;
-            box-shadow: 0 4px 24px rgba(120,80,40,0.1);
+            box-shadow: 0 4px 24px rgba(120, 80, 40, 0.1);
             position: relative;
         }
 
         .step-number {
             position: absolute;
-            top: -24px; left: 36px;
-            width: 52px; height: 52px;
-            background: linear-gradient(135deg, var(--orange) 0%, #d69264 100%);
+            top: -24px;
+            left: 36px;
+            width: 52px;
+            height: 52px;
+            background: linear-gradient(
+                135deg,
+                var(--orange) 0%,
+                #d69264 100%
+            );
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -299,11 +334,23 @@
             font-size: 24px;
             font-weight: 700;
             color: white;
-            box-shadow: 0 4px 12px rgba(192,105,42,0.3);
+            box-shadow: 0 4px 12px rgba(192, 105, 42, 0.3);
         }
 
-        .step h3 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 700; color: var(--dark); margin: 28px 0 14px; letter-spacing: -0.5px; }
-        .step p { font-size: 15px; line-height: 1.75; color: var(--muted); }
+        .step h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 28px 0 14px;
+            letter-spacing: -0.5px;
+        }
+
+        .step p {
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--muted);
+        }
 
         .step-highlight {
             background: #fff5f0;
@@ -313,18 +360,36 @@
             border-radius: 0 8px 8px 0;
         }
 
-        .step-highlight strong { color: var(--orange); display: block; margin-bottom: 6px; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; }
-        .step-highlight p { font-size: 14px; margin: 0; }
+        .step-highlight strong {
+            color: var(--orange);
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
 
-        /* Why Threyd — orange (4th section) */
+        .step-highlight p {
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Why Threyd — cream */
         .why-threyd {
-            background: linear-gradient(135deg, var(--orange) 0%, #d69264 100%);
-            color: white;
+            background: var(--cream);
+            color: var(--text);
             padding: 120px 60px;
         }
 
-        .comparison-container { max-width: 1200px; margin: 0 auto; }
-        .comparison-intro { text-align: center; margin-bottom: 72px; }
+        .comparison-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .comparison-intro {
+            text-align: center;
+            margin-bottom: 72px;
+        }
 
         .comparison-intro h2 {
             font-family: 'Playfair Display', serif;
@@ -332,29 +397,90 @@
             font-weight: 700;
             letter-spacing: -2px;
             margin-bottom: 20px;
+            color: var(--dark);
+        }
+
+        .comparison-intro p {
+            font-size: 20px;
+            color: var(--muted);
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .comparison-table {
+            background: var(--card-bg);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 8px 40px rgba(120, 80, 40, 0.12);
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            padding: 28px 36px;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--dark);
+            border-bottom: 2px solid #e8e0d8;
+        }
+
+        .comparison-table th:first-child {
+            background: var(--dark);
             color: white;
         }
 
-        .comparison-intro p { font-size: 20px; opacity: 0.9; max-width: 640px; margin: 0 auto; }
+        .comparison-table th:nth-child(2) {
+            background: #ede8e2;
+        }
 
-        .comparison-table { background: var(--card-bg); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.2); }
-        .comparison-table table { width: 100%; border-collapse: collapse; }
+        .comparison-table th:last-child {
+            background: var(--orange);
+            color: white;
+        }
 
-        .comparison-table th { padding: 28px 36px; text-align: left; font-size: 16px; font-weight: 700; color: var(--dark); border-bottom: 2px solid #e8e0d8; }
-        .comparison-table th:first-child { background: var(--dark); color: white; }
-        .comparison-table th:nth-child(2) { background: #ede8e2; }
-        .comparison-table th:last-child { background: var(--orange); color: white; }
+        .comparison-table td {
+            padding: 22px 36px;
+            font-size: 15px;
+            color: var(--text);
+            border-bottom: 1px solid #e8e0d8;
+            line-height: 1.6;
+        }
 
-        .comparison-table td { padding: 22px 36px; font-size: 15px; color: var(--text); border-bottom: 1px solid #e8e0d8; line-height: 1.6; }
-        .comparison-table tr:last-child td { border-bottom: none; }
-        .comparison-table td:first-child { font-weight: 600; background: #faf6f1; }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
 
-        .check { color: #2d6a4f; font-size: 22px; font-weight: 900; }
-        .x-mark { color: #c1121f; font-size: 22px; font-weight: 900; }
+        .comparison-table td:first-child {
+            font-weight: 600;
+            background: #faf6f1;
+        }
 
-        /* FAQ — cream (5th section) */
-        .faq { background: var(--cream); padding: 120px 60px; }
-        .faq-container { max-width: 900px; margin: 0 auto; }
+        .check {
+            color: #2d6a4f;
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        .x-mark {
+            color: #c1121f;
+            font-size: 22px;
+            font-weight: 900;
+        }
+
+        /* FAQ — cream */
+        .faq {
+            background: var(--cream);
+            padding: 120px 60px;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
 
         .faq-item {
             background: var(--card-bg);
@@ -362,28 +488,72 @@
             border-radius: 16px;
             margin-bottom: 20px;
             border-left: 5px solid var(--orange);
-            box-shadow: 0 2px 16px rgba(120,80,40,0.06);
+            box-shadow: 0 2px 16px rgba(120, 80, 40, 0.06);
         }
 
-        .faq-item h3 { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--dark); margin-bottom: 12px; }
-        .faq-item p { font-size: 15px; line-height: 1.75; color: var(--muted); margin-bottom: 10px; }
-        .faq-item p:last-child { margin-bottom: 0; }
+        .faq-item h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+        }
+
+        .faq-item p {
+            font-size: 15px;
+            line-height: 1.75;
+            color: var(--muted);
+            margin-bottom: 10px;
+        }
+
+        .faq-item p:last-child {
+            margin-bottom: 0;
+        }
 
         /* Contact */
-        .contact { background: var(--cream); padding: 100px 60px; text-align: center; position: relative; overflow: hidden; }
+        .contact {
+            background: var(--cream);
+            padding: 100px 60px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
 
         .contact::before {
             content: '';
             position: absolute;
-            width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(192,105,42,0.1) 0%, transparent 70%);
-            bottom: -200px; left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(
+                circle,
+                rgba(192, 105, 42, 0.1) 0%,
+                transparent 70%
+            );
+            bottom: -200px;
+            left: -100px;
         }
 
-        .contact-content { max-width: 640px; margin: 0 auto; position: relative; z-index: 2; }
+        .contact-content {
+            max-width: 640px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
 
-        .contact h2 { font-family: 'Playfair Display', serif; font-size: 52px; font-weight: 700; margin-bottom: 20px; letter-spacing: -2px; color: var(--dark); }
-        .contact p { font-size: 18px; margin-bottom: 36px; color: var(--muted); }
+        .contact h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 52px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            letter-spacing: -2px;
+            color: var(--dark);
+        }
+
+        .contact p {
+            font-size: 18px;
+            margin-bottom: 36px;
+            color: var(--muted);
+        }
 
         .contact a {
             display: inline-block;
@@ -395,36 +565,97 @@
             font-weight: 700;
             font-size: 17px;
             transition: all 0.3s;
-            box-shadow: 0 8px 24px rgba(192,105,42,0.3);
+            box-shadow: 0 8px 24px rgba(192, 105, 42, 0.3);
         }
 
-        .contact a:hover { background: #a84823; transform: translateY(-2px); box-shadow: 0 12px 32px rgba(192,105,42,0.4); }
+        .contact a:hover {
+            background: #a84823;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(192, 105, 42, 0.4);
+        }
 
         /* Footer */
-        footer { background: var(--dark); color: white; padding: 36px 60px; text-align: center; }
-        footer p { font-size: 13px; opacity: 0.5; }
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 36px 60px;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 13px;
+            opacity: 0.5;
+        }
 
         /* Mobile */
         @media (max-width: 968px) {
-            .hero { grid-template-columns: 1fr; min-height: auto; }
-            .hero-visual { min-height: 260px; }
-            .hero-content { padding: 80px 36px; }
-            .hero h1 { font-size: 38px; }
-            .about { grid-template-columns: 1fr; gap: 40px; padding: 80px 36px; }
-            .about-title { position: static; }
-            .about-title h2 { font-size: 48px; }
-            .steps-container { grid-template-columns: 1fr; gap: 28px; }
-            .services-grid { flex-direction: column; }
-            .service-connector { display: none; }
-            .section-header .section-title { font-size: 38px; }
-            .comparison-intro h2 { font-size: 36px; }
-            .how-it-works, .services, .why-threyd, .faq { padding: 80px 28px; }
-            .comparison-table th, .comparison-table td { padding: 18px 14px; font-size: 13px; }
-            .contact h2 { font-size: 36px; }
-            header { padding: 22px 28px; }
+            .hero {
+                grid-template-columns: 1fr;
+                min-height: auto;
+            }
+
+            .hero-visual {
+                min-height: 260px;
+            }
+
+            .hero-content {
+                padding: 80px 36px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .about {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 80px 36px;
+            }
+
+            .about-title {
+                position: static;
+            }
+
+            .about-title h2 {
+                font-size: 48px;
+            }
+
+            .steps-container {
+                grid-template-columns: 1fr;
+                gap: 28px;
+            }
+
+            .section-header .section-title {
+                font-size: 38px;
+            }
+
+            .comparison-intro h2 {
+                font-size: 36px;
+            }
+
+            .how-it-works,
+            .why-threyd,
+            .faq {
+                padding: 80px 28px;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 18px 14px;
+                font-size: 13px;
+            }
+
+            .contact h2 {
+                font-size: 36px;
+            }
+
+            header {
+                padding: 22px 28px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -435,9 +666,18 @@
     <!-- Hero -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Stronger connections. <span class="hero-highlight">Stronger retention.</span></h1>
-            <p>Threyd provides managed customer support, built on the premise that churn prevention starts with talent retention—because engagement behind the scenes becomes loyalty on the front lines.</p>
+            <h1>
+                Stronger connections.
+                <span class="hero-highlight">Stronger retention.</span>
+            </h1>
+
+            <p>
+                Threyd provides managed customer support talent, built on the premise
+                that churn prevention starts with talent retention—because engagement
+                behind the scenes becomes loyalty on the front lines.
+            </p>
         </div>
+
         <div class="hero-visual">
             <div class="hero-symbol">
                 <div class="symbol-line line1"></div>
@@ -451,72 +691,165 @@
     <!-- About — cream -->
     <section class="about-container">
         <div class="about">
+
             <div class="about-title">
                 <div class="eyebrow">Our Story</div>
                 <h2>About</h2>
             </div>
+
             <div class="about-content">
-                <p>Founded by a customer experience leader who has scaled support teams at multi-million dollar growth-stage companies.<p>
-                <p>We built Threyd to sew together what traditional staffing agencies tore apart: the connection between how talent is treated and the results clients actually get.</p>
-                <p>Most customer support partnerships look the same: agencies minimize what they pay talent, maximize their markup, and leave clients absorbing the fallout—disengaged agents and customers who feel it.</p>
-                <div class="pullquote">When professionals are fairly compensated and genuinely supported, they care about outcomes—because someone cared about theirs. Your customers feel the difference, and <strong>so does your bottom line.</strong></div>
-                <p>The result is white-glove support without the handholding.<p>
-                <p>Not because we've automated it, but because we've built a team that genuinely understands your business, takes ownership, and has every reason to care.<p>
-                <p>You get a weekly report in your inbox, a single point of contact who knows your account, and a team that handles the day-to-day before it becomes your day-to-day. <strong>You're never out of the loop—you're just out of the weeds.</strong><p>
-                <p>Our name is deliberate. Every partnership is a thread. Not between a "client" and a "resource." Between two outcomes that depend on each other. Your growth. Their dignity. Pulled tight, they hold.</p>
-                <p><b>No extraction. No exploitation. Just connections that hold.<b></p>
+
+                <p>
+                    Founded by a customer experience leader who has scaled support
+                    teams at multi-million dollar growth-stage companies.
+                </p>
+
+                <p>
+                    We built Threyd to sew together what traditional staffing agencies
+                    tore apart: the connection between how talent is treated and the
+                    results clients actually get.
+                </p>
+
+                <p>
+                    Most customer support partnerships look the same: agencies minimize
+                    what they pay talent, maximize their markup, and leave clients
+                    absorbing the fallout—disengaged agents and customers who feel it.
+                </p>
+
+                <div class="pullquote">
+                    When professionals are fairly compensated and genuinely supported,
+                    they care about outcomes—because someone cared about theirs.
+                    Your customers feel the difference, and
+                    <strong>so does your bottom line.</strong>
+                </div>
+
+                <p>
+                    The result is white-glove support without the handholding.
+                </p>
+
+                <p>
+                    Not because we've automated it, but because we've built a team that
+                    genuinely understands your business, takes ownership, and has every
+                    reason to care.
+                </p>
+
+                <p>
+                    You get a weekly report in your inbox, a single point of contact
+                    who knows your account, and a team that handles the day-to-day
+                    before it becomes your day-to-day.
+                    <strong>
+                        You're never out of the loop—you're just out of the weeds.
+                    </strong>
+                </p>
+
+                <p>
+                    Our name is deliberate. Every partnership is a thread. Not between
+                    a "client" and a "resource." Between two outcomes that depend on
+                    each other. Your growth. Their dignity. Pulled tight, they hold.
+                </p>
+
+                <p>
+                    <strong>
+                        No extraction. No exploitation. Just connections that hold.
+                    </strong>
+                </p>
+
             </div>
         </div>
     </section>
 
-
-    <!-- How It Works — cream -->
+    <!-- How It Works — orange -->
     <section class="how-it-works">
+
         <div class="section-header">
             <div class="eyebrow">Simple Process</div>
             <h2 class="section-title">How It Works</h2>
-            <p class="section-intro">The last support decision you'll have to make.</p>
+            <p class="section-intro">
+                The last support decision you'll have to make.
+            </p>
         </div>
+
         <div class="steps-container">
+
             <div class="step">
                 <div class="step-number">1</div>
+
                 <h3>We Learn Your Business</h3>
-                <p>We start with a deep intake process — not a form, a conversation. We learn your customers, your standards, your edge cases, and what exceptional support looks like in your context. Everything we build is calibrated to that.</p>
+
+                <p>
+                    We start with a deep intake process — not a form, a conversation.
+                    We learn your customers, your standards, your edge cases, and what
+                    exceptional support looks like in your context. Everything we build
+                    is calibrated to that.
+                </p>
+
                 <div class="step-highlight">
                     <strong>What makes us different:</strong>
-                    <p>We're not slotting in a generic agent. We're designing a support function around your specific operation.</p>
+                    <p>
+                        We're not slotting in a generic agent. We're designing a support
+                        function around your specific operation.
+                    </p>
                 </div>
             </div>
+
             <div class="step">
                 <div class="step-number">2</div>
+
                 <h3>We Build Your Team</h3>
-                <p>We recruit, vet, and onboard professionals specifically for your role — assessing technical skills, communication, and cultural fit. You don't interview candidates or manage hiring logistics. We handle it, and we stand behind the result.</p>
+
+                <p>
+                    We recruit, vet, and onboard professionals specifically for your
+                    role — assessing technical skills, communication, and cultural fit.
+                    You don't interview candidates or manage hiring logistics. We handle
+                    it, and we stand behind the result.
+                </p>
+
                 <div class="step-highlight">
                     <strong>Dedicated talent only:</strong>
-                    <p>Your team works exclusively for you. No shared agents, no split attention, no competing priorities.</p>
+                    <p>
+                        Your team works exclusively for you. No shared agents, no split
+                        attention, no competing priorities.
+                    </p>
                 </div>
             </div>
+
             <div class="step">
                 <div class="step-number">3</div>
+
                 <h3>We Run It</h3>
-                <p>Once your team is in place, we don't hand off and disappear. We manage day-to-day operations, own performance and escalations, and deliver weekly reporting on the metrics that matter. If something needs adjusting, we catch it before you do.</p>
+
+                <p>
+                    Once your team is in place, we don't hand off and disappear.
+                    We manage day-to-day operations, own performance and escalations,
+                    and deliver weekly reporting on the metrics that matter.
+                    If something needs adjusting, we catch it before you do.
+                </p>
+
                 <div class="step-highlight">
                     <strong>Ongoing accountability:</strong>
-                    <p>The partnership doesn't end at onboarding. We stay involved because your results are our responsibility.</p>
+                    <p>
+                        The partnership doesn't end at onboarding. We stay involved
+                        because your results are our responsibility.
+                    </p>
                 </div>
             </div>
+
         </div>
     </section>
 
-    <!-- Why Threyd — orange -->
+    <!-- Why Threyd — cream -->
     <section class="why-threyd">
+
         <div class="comparison-container">
+
             <div class="comparison-intro">
                 <h2>A Different Model</h2>
                 <p>Here's what sets us apart.</p>
             </div>
+
             <div class="comparison-table">
                 <table>
+
                     <thead>
                         <tr>
                             <th></th>
@@ -524,85 +857,159 @@
                             <th>Threyd</th>
                         </tr>
                     </thead>
+
                     <tbody>
+
                         <tr>
                             <td>Dedication</td>
                             <td>Agents split across multiple clients</td>
                             <td>Your team works exclusively for you</td>
                         </tr>
+
                         <tr>
                             <td>Talent Assignment</td>
                             <td>Random assignment from internal pool</td>
                             <td>Recruited specifically for your role</td>
                         </tr>
+
                         <tr>
                             <td>Cultural Fit</td>
                             <td>Skills-only matching</td>
-                            <td>We match for personality, communication, and culture</td>
+                            <td>
+                                We match for personality, communication, and culture
+                            </td>
                         </tr>
+
                         <tr>
                             <td>Management</td>
                             <td>You manage the people we place</td>
                             <td>We own performance, escalations, and reporting</td>
                         </tr>
+
                         <tr>
-                            <td>Burnout & Turnover</td>
+                            <td>Burnout &amp; Turnover</td>
                             <td>Low pay, high churn, constant retraining</td>
-                            <td>Fair compensation, stable teams, consistent results</td>
+                            <td>
+                                Fair compensation, stable teams, consistent results
+                            </td>
                         </tr>
+
                         <tr>
                             <td>Transparency</td>
                             <td>Hidden margins, unclear pricing</td>
                             <td>One invoice, no surprises</td>
                         </tr>
-                        <tr>
-                           
-                        </tr>
+
                     </tbody>
                 </table>
             </div>
+
         </div>
     </section>
 
     <!-- FAQ — cream -->
     <section class="faq">
+
         <div class="section-header">
             <div class="eyebrow">Questions</div>
             <h2 class="section-title">FAQ</h2>
         </div>
+
         <div class="faq-container">
+
             <div class="faq-item">
                 <h3>What does "fully managed" actually mean?</h3>
-                <p>It means we own the operation, not just the placement. We recruit and onboard your team, manage day-to-day performance, handle escalations, and deliver weekly reporting on the metrics that matter. You set the standard. We hold it.</p>
+
+                <p>
+                    It means we own the operation, not just the placement.
+                    We recruit and onboard your team, manage day-to-day performance,
+                    handle escalations, and deliver weekly reporting on the metrics
+                    that matter. You set the standard. We hold it.
+                </p>
             </div>
+
             <div class="faq-item">
                 <h3>How do you measure performance?</h3>
-                <p>We establish KPIs at the start of every engagement — tailored to your operation, not borrowed from a generic template. From there, you receive weekly reporting with full visibility into how your team is performing. If something needs adjusting, we identify it and address it. You stay informed without being in the weeds.</p>
+
+                <p>
+                    We establish KPIs at the start of every engagement — tailored to
+                    your operation, not borrowed from a generic template. From there,
+                    you receive weekly reporting with full visibility into how your
+                    team is performing. If something needs adjusting, we identify it
+                    and address it. You stay informed without being in the weeds.
+                </p>
             </div>
+
             <div class="faq-item">
                 <h3>What happens if it isn't working?</h3>
-                <p>We stand behind every placement with a 90-day replacement guarantee. If the fit isn't right, we rebuild at no additional cost. That said, we stay involved throughout the engagement precisely to catch problems early — most issues are resolved long before they become decisions.</p>
+
+                <p>
+                    We stand behind every placement with a 90-day replacement guarantee.
+                    If the fit isn't right, we rebuild at no additional cost. That said,
+                    we stay involved throughout the engagement precisely to catch
+                    problems early — most issues are resolved long before they become
+                    decisions.
+                </p>
             </div>
+
             <div class="faq-item">
                 <h3>How quickly can we get started?</h3>
-                <p>Most engagements go from intake to launch in two to three weeks. We move deliberately because a rushed match costs everyone more in the long run. The time we invest upfront is what makes the partnership work.</p>
-        </div>
+
+                <p>
+                    Most engagements go from intake to launch in two to three weeks.
+                    We move deliberately because a rushed match costs everyone more in
+                    the long run. The time we invest upfront is what makes the
+                    partnership work.
+                </p>
+            </div>
+
             <div class="faq-item">
                 <h3>What does this cost?</h3>
-                <p>Pricing is scoped to your role, the skills required, and the hours needed. We provide a transparent quote with no hidden margins — what you're quoted is what you pay. Expect rates comparable to a skilled US contractor, with the consistency and accountability of a fully managed team behind them.</p>
-        </div>   
-                <div class="faq-item">
-                <h3>Who are the professionals on your team, and where are they based?</h3>
-                <p>Our professionals are based internationally, recruited specifically for your role rather than assigned from a standing pool. We pay above-market rates for the regions we hire in — not because it's the ethical thing to do, though it is, but because it's what produces the quality and retention our clients rely on. Engaged, fairly compensated professionals deliver better support. Your customers feel that difference.</p>
+
+                <p>
+                    Pricing is scoped to your role, the skills required, and the hours
+                    needed. We provide a transparent quote with no hidden margins —
+                    what you're quoted is what you pay. Expect rates comparable to a
+                    skilled US contractor, with the consistency and accountability of
+                    a fully managed team behind them.
+                </p>
+            </div>
+
+            <div class="faq-item">
+                <h3>
+                    Who are the professionals on your team, and where are they based?
+                </h3>
+
+                <p>
+                    Our professionals are based internationally, recruited specifically
+                    for your role rather than assigned from a standing pool. We pay
+                    above-market rates for the regions we hire in — not because it's
+                    the ethical thing to do, though it is, but because it's what
+                    produces the quality and retention our clients rely on. Engaged,
+                    fairly compensated professionals deliver better support.
+                    Your customers feel that difference.
+                </p>
+            </div>
+
         </div>
     </section>
 
     <!-- Contact -->
     <section class="contact">
+
         <div class="contact-content">
+
             <h2>Ready to Connect?</h2>
-            <p>Let's talk about how Threyd can support your business with exceptional talent.</p>
-            <a href="mailto:hello@threyd.com">Get in Touch</a>
+
+            <p>
+                Let's talk about how Threyd can support your business with exceptional
+                talent.
+            </p>
+
+            <a href="mailto:hello@threyd.com">
+                Get in Touch
+            </a>
+
         </div>
     </section>
 
