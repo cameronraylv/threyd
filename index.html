@@ -260,15 +260,15 @@
         .service-card h3 { font-size: 18px; font-weight: 700; color: var(--dark); margin-bottom: 14px; }
         .service-card p { font-size: 15px; line-height: 1.75; color: var(--muted); }
 
-        /* How It Works — cream (3rd section) */
+        /* How It Works — orange (3rd section) */
         .how-it-works {
-            background: var(--cream);
+            background: linear-gradient(135deg, var(--orange) 0%, #d69264 100%);
             padding: 120px 60px;
         }
 
-        .how-it-works .section-header .eyebrow { color: var(--orange); }
-        .how-it-works .section-header .section-title { color: var(--dark); }
-        .how-it-works .section-header .section-intro { color: var(--muted); }
+        .how-it-works .section-header .eyebrow { color: rgba(255,255,255,0.85); }
+        .how-it-works .section-header .section-title { color: white; }
+        .how-it-works .section-header .section-intro { color: rgba(255,255,255,0.9); }
 
         .steps-container {
             max-width: 1200px;
@@ -316,10 +316,10 @@
         .step-highlight strong { color: var(--orange); display: block; margin-bottom: 6px; font-size: 13px; letter-spacing: 0.05em; text-transform: uppercase; }
         .step-highlight p { font-size: 14px; margin: 0; }
 
-        /* Why Threyd — orange (4th section) */
+        /* Why Threyd — cream (4th section) */
         .why-threyd {
-            background: linear-gradient(135deg, var(--orange) 0%, #d69264 100%);
-            color: white;
+            background: var(--cream);
+            color: var(--text);
             padding: 120px 60px;
         }
 
@@ -332,10 +332,10 @@
             font-weight: 700;
             letter-spacing: -2px;
             margin-bottom: 20px;
-            color: white;
+            color: var(--dark);
         }
 
-        .comparison-intro p { font-size: 20px; opacity: 0.9; max-width: 640px; margin: 0 auto; }
+        .comparison-intro p { font-size: 20px; color: var(--muted); opacity: 0.9; max-width: 640px; margin: 0 auto; }
 
         .comparison-table { background: var(--card-bg); border-radius: 16px; overflow: hidden; box-shadow: 0 8px 40px rgba(0,0,0,0.2); }
         .comparison-table table { width: 100%; border-collapse: collapse; }
@@ -352,8 +352,10 @@
         .check { color: #2d6a4f; font-size: 22px; font-weight: 900; }
         .x-mark { color: #c1121f; font-size: 22px; font-weight: 900; }
 
-        /* FAQ — cream (5th section) */
-        .faq { background: var(--cream); padding: 120px 60px; }
+        /* FAQ — orange (5th section) */
+        .faq { background: linear-gradient(135deg, var(--orange) 0%, #d69264 100%); padding: 120px 60px; }
+        .faq .section-header .eyebrow { color: rgba(255,255,255,0.85); }
+        .faq .section-header .section-title { color: white; }
         .faq-container { max-width: 900px; margin: 0 auto; }
 
         .faq-item {
@@ -423,59 +425,6 @@
             .contact h2 { font-size: 36px; }
             header { padding: 22px 28px; }
         }
-      /* FINAL SECTION COLOR OVERRIDES */
-
-/* How It Works — orange */
-.how-it-works {
-    background: linear-gradient(135deg, var(--orange) 0%, #d69264 100%);
-}
-
-.how-it-works .eyebrow,
-.how-it-works .section-title,
-.how-it-works .section-intro {
-    color: white;
-}
-
-/* Why Threyd — cream */
-.why-threyd {
-    background: var(--cream);
-    color: var(--text);
-}
-
-.comparison-intro h2 {
-    color: var(--dark);
-}
-
-.comparison-intro p {
-    color: var(--muted);
-}
-
-/* FAQ — orange */
-.faq {
-    background: linear-gradient(135deg, var(--orange) 0%, #d69264 100%);
-}
-
-.faq .eyebrow,
-.faq .section-title {
-    color: white;
-}
-
-/* Contact — cream */
-.contact {
-    background: var(--cream);
-}
-.how-it-works .eyebrow {
-    color: rgba(255,255,255,0.85);
-}
-
-.how-it-works .section-title {
-    color: white;
-}
-
-.how-it-works .section-intro {
-    color: rgba(255,255,255,0.9);
-}
-</style>
     </style>
 </head>
 <body>
@@ -522,7 +471,6 @@
         </div>
     </section>
 
-
     <!-- How It Works — cream -->
     <section class="how-it-works">
         <div class="section-header">
@@ -540,6 +488,7 @@
                     <p>We learn how you want support handled, then hire and manage around that.</p>
                 </div>
             </div>
+
             <div class="step">
                 <div class="step-number">2</div>
                 <h3>We Build Your Team</h3>
@@ -549,6 +498,7 @@
                     <p>Your team works exclusively for you. No shared agents, no split attention, no competing priorities.</p>
                 </div>
             </div>
+
             <div class="step">
                 <div class="step-number">3</div>
                 <h3>We Manage The Team</h3>
@@ -568,6 +518,7 @@
                 <h2>A Different Model</h2>
                 <p>Here's what sets us apart.</p>
             </div>
+
             <div class="comparison-table">
                 <table>
                     <thead>
@@ -577,44 +528,51 @@
                             <th>Threyd</th>
                         </tr>
                     </thead>
+
                     <tbody>
                         <tr>
                             <td>Dedication</td>
                             <td>Agents split across multiple clients</td>
                             <td>Your team works exclusively for you</td>
                         </tr>
+
                         <tr>
                             <td>Talent Assignment</td>
                             <td>Random assignment from internal pool</td>
                             <td>Recruited specifically for your role</td>
                         </tr>
+
                         <tr>
                             <td>Cultural Fit</td>
                             <td>Skills-only matching</td>
                             <td>We match for personality, communication, and culture</td>
                         </tr>
+
                         <tr>
                             <td>Management</td>
                             <td>You manage the people</td>
                             <td>We own performance, escalations, and reporting</td>
                         </tr>
-                       <tr>
+
+                        <tr>
                             <td>Accountability</td>
                             <td>Staffing ends at placement</td>
                             <td>We stay involved after onboarding</td>
                         </tr>
+
                         <tr>
                             <td>Burnout & Turnover</td>
                             <td>Low pay, high churn, constant retraining</td>
                             <td>Fair compensation, stable teams, consistent results</td>
                         </tr>
+
                         <tr>
                             <td>Transparency</td>
                             <td>Hidden margins, unclear pricing</td>
                             <td>One invoice, no surprises</td>
                         </tr>
+
                         <tr>
-                           
                         </tr>
                     </tbody>
                 </table>
@@ -628,30 +586,37 @@
             <div class="eyebrow">Questions</div>
             <h2 class="section-title">FAQ</h2>
         </div>
+
         <div class="faq-container">
             <div class="faq-item">
                 <h3>What does "managed" actually mean?</h3>
                 <p>It means we don’t stop at placement. From recruiting and onboarding to coaching, QA, and daily escalations, your team's performance is our responsibility.</p>
             </div>
+
             <div class="faq-item">
                 <h3>How do you measure performance?</h3>
                 <p>We establish KPIs at the start of every engagement — tailored to your operation, not borrowed from a generic template. From there, you receive weekly reporting with full visibility into how your team is performing. If something needs adjusting, we identify it and address it.</p>
             </div>
+
             <div class="faq-item">
                 <h3>What happens if it isn't working?</h3>
                 <p>We stand behind every placement with a 90-day replacement guarantee. If the fit isn't right, we rebuild at no additional cost. That said, we stay involved throughout the engagement precisely to catch problems early — most issues are resolved long before they become decisions.</p>
             </div>
+
             <div class="faq-item">
                 <h3>How quickly can we get started?</h3>
                 <p>Most engagements go from intake to launch in two to three weeks. We move fast, but not at the expense of fit. The goal isn’t to fill a seat, it’s to build a team worth keeping.</p>
-        </div>
+            </div>
+
             <div class="faq-item">
                 <h3>What does this cost?</h3>
                 <p>Pricing is scoped to the role, the skills required, and the hours needed. You’ll get one clear monthly rate that covers both the talent and Threyd’s ongoing management — no separate recruiting fees, no surprise add-ons.</p>
-        </div>   
-                <div class="faq-item">
+            </div>
+
+            <div class="faq-item">
                 <h3>Who are the professionals on your team, and where are they based?</h3>
                 <p>Our professionals are based internationally, recruited specifically for your role rather than assigned from a standing pool. We pay above-market rates for the regions we hire in — not only because it's the ethical thing to do, but because it produces the quality and retention our clients rely on. Engaged, fairly compensated professionals deliver better support, and your customers feel the difference.</p>
+            </div>
         </div>
     </section>
 
